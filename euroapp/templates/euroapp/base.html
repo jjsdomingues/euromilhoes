@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8">
+    <title>GERADOR DE CHAVES DO EUROMILHÕES</title>
+    <style>
+        body {text-align: center;background-image: url('{% static "images/stars.jpg" %}');background-size: cover;font-family: 'Rubik', sans-serif;color: #E6F2FF;padding: 0;margin: 0;display: flex;flex-direction: column;min-height: 100vh;}
+
+        .image-container {margin-top: 0px;}
+
+        .content-container {font-size: 12px;text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);color: #E6F2FF;}
+
+        hr {color: #3399CC;margin: 4px 0;}
+        
+        .button-container {margin-top: 15px;}
+
+        .button-container a {margin-top: 20px;padding: 10px 20px;background-color: #2979A4;color: #E6F2FF;text-decoration: none;border-radius: 4px;font-size: 24px;width: 450px;box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);}
+
+        .image-container:last-child {margin-top: auto;}
+        
+        .image-container img {width: 100%;display: block;}
+        
+        .custom-button {display: block;margin: 15px auto;background-color: #2979A4;color: #E6F2FF;text-decoration: none;border-radius: 4px;font-size: 20px;width: 300px;box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);}    
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="{% static 'images/euromilhoes.jpg' %}" style="width: 100%">
+    </div>
+    <div class="content-container">
+        <h1>GERADOR DE CHAVES DO EUROMILHÕES</h1>
+        <hr>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+    <div class="image-container">
+        <img src="{% static 'images/euromilhoes_bot.jpg' %}" style="width: 100%;">
+    </div>
+</body>
+</html>

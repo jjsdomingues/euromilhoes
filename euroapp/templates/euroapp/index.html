@@ -1,0 +1,10 @@
+{% extends 'euroapp/base.html' %}
+
+{% block content %}
+    <div class="button-container" style="text-align: center;">
+        <br>
+        <a href="{% url 'euroapp:gerar_chave' %}" class="custom-button">Gerar chave para jogar no Euromilhões</a><br>
+        <a href="{% url 'euroapp:visualizar_chaves' %}" class="custom-button">Visualizar todas as chaves já geradas</a>
+        <br>
+    </div>
+{% endblock %}

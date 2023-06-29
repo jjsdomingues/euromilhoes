@@ -1,0 +1,31 @@
+{% extends 'euroapp/base.html' %}
+
+{% block content %}
+    <style>
+        body, html {height: 100%;}
+        .chaves-container {max-height: 70vh; overflow-y: auto;}
+        h1 {font-size: 24px;text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8)}
+        table td {font-size: 20px; padding-left: 15px;text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8)}
+    </style>
+    
+    <h1>Chave gerada:</h1>
+    <hr>
+    <div class="chaves-container">
+        <TABLE align="center">
+            <TR >
+                <TD>
+                    <TABLE>
+                        <TR style="text-align: left;"><TH>Data:</TH><TD> {{chave.data}}</TD></TR>
+                        <TR style="text-align: left;"><TH>Números:</TH><TD> {{chave.numeros}}</TD></TR>
+                        <TR style="text-align: left;"><TH>Estrelas:</TH><TD> {{chave.estrelas}}</TD></TR>
+                        <BR>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+    <div class="button-container">
+        <a href="{% url 'euroapp:gerar_chave' %}" class="custom-button">Gerar uma nova chave</a><br>
+        <a href="{% url 'euroapp:index' %}" class="custom-button">Voltar à página inicial</a>
+    </div>
+{% endblock %}
